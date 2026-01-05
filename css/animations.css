@@ -1,0 +1,27 @@
+/* ===== SECTION ANIMATION ===== */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-animate].in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== PROJECT CARD STAGGER ===== */
+.project-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+  transition-delay: var(--delay, 0s);
+}
+
+/* when section becomes visible, cards animate */
+.section.in-view .project-card {
+  opacity: 1;
+  transform: translateY(0);
+}
